@@ -1,4 +1,5 @@
 * {
+  font-family: "Poppins", sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -43,6 +44,7 @@ nav {
   height: 3px;
   background-color: lightblue;
   margin: 5px;
+  transition: all 0.5s ease;
 }
 
 /* Header */
@@ -124,22 +126,24 @@ nav {
   body {
     overflow-x: hidden;
   }
+  nav {
+    justify-content: flex-end;
+  }
   .main-title {
     font-size: 3em;
   }
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 99.9vh;
+    top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 40%;
     transform: translateX(100%);
-    z-index: 2;
-    background-color: red;
-    transition: transform 0.5s ease-in;
+    background-color: lightgray;
+    transition: transform 0.3s ease-in;
   }
   .nav-links li {
     opacity: 0;
@@ -153,6 +157,7 @@ nav {
   transform: translateX(0%);
 }
 
+/* Navigation Animation */
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -162,4 +167,15 @@ nav {
     opacity: 1;
     transform: translateX(0px);
   }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
