@@ -1,0 +1,126 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+section {
+  font-family: "Open Sans", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  margin: 0 auto 30px;
+}
+section a {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 2.875em;
+}
+section.p8 a {
+  width: 389px;
+  height: 57px;
+  line-height: 57px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -194.5px;
+  margin-top: -28.5px;
+  color: transparent;
+}
+section.p8 a:before,
+section.p8 a:after {
+  content: attr(data-cont);
+  width: 389px;
+  height: 57px;
+  line-height: 57px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -194.5px;
+  margin-top: -28.5px;
+  color: black;
+  -webkit-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+  -moz-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+  -ms-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+  -o-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+  transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+}
+section.p8 a:before {
+  -webkit-clip-path: polygon(0 0, 0 100%, 275.90443638px 100%, 113.09556362px 0%);
+  clip-path: polygon(0 0, 0 100%, 275.90443638px 100%, 113.09556362px 0%);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transform-origin: 25% 50%;
+  -moz-transform-origin: 25% 50%;
+  -ms-transform-origin: 25% 50%;
+  -o-transform-origin: 25% 50%;
+  transform-origin: 25% 50%;
+}
+section.p8 a:after {
+  -webkit-clip-path: polygon(113.09556362px 0, 275.90443638px 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(113.09556362px 0, 275.90443638px 100%, 100% 100%, 100% 0%);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transform-origin: 75% 50%;
+  -moz-transform-origin: 75% 50%;
+  -ms-transform-origin: 75% 50%;
+  -o-transform-origin: 75% 50%;
+  transform-origin: 75% 50%;
+}
+section.p8 a .line {
+  background-color: #ffffff;
+  width: 0.001px;
+  height: 2px;
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  transform: rotate(35deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.0005px;
+  margin-top: -1px;
+  -webkit-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+  -moz-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+  -ms-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+  -o-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+  transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
+}
+section.p8 a:hover:before {
+  color: #fff;
+  -webkit-transform: translate(20px, 14.00415076px);
+  -moz-transform: translate(20px, 14.00415076px);
+  -ms-transform: translate(20px, 14.00415076px);
+  -o-transform: translate(20px, 14.00415076px);
+  transform: translate(20px, 14.00415076px);
+}
+section.p8 a:hover:after {
+  color: #fff;
+  -webkit-transform: translate(-20px, -14.00415076px);
+  -moz-transform: translate(-20px, -14.00415076px);
+  -ms-transform: translate(-20px, -14.00415076px);
+  -o-transform: translate(-20px, -14.00415076px);
+  transform: translate(-20px, -14.00415076px);
+}
+section.p8 a:hover .line {
+  width: 778px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -389px;
+  margin-top: -1px;
+  background-color: black;
+}
