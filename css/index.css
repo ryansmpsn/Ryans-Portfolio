@@ -51,7 +51,7 @@ nav {
 .large-header {
   position: relative;
   width: 100%;
-  background: #333;
+  /* background: #333; */
   overflow: hidden;
   background-size: cover;
   background-position: center center;
@@ -59,7 +59,7 @@ nav {
 }
 
 #large-header {
-  background-image: url("/img/Header.jpg");
+  background-image: url("/img/Headerzz.jpg");
 }
 
 .main-title {
@@ -76,11 +76,11 @@ nav {
   font-size: 0.7em;
 }
 
-#large-header .main-title {
+#click-hover .main-title {
   visibility: hidden;
 }
 
-#large-header:hover .main-title {
+#click-hover:hover .main-title {
   visibility: visible;
 }
 
@@ -88,43 +88,7 @@ nav {
   font-weight: 200;
 }
 
-/* Cursor */
-.cursor__inner {
-  z-index: 9999;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  mix-blend-mode: difference;
-  border-radius: 50%;
-}
-
-.cursor__inner--dot {
-  width: 6px;
-  height: 6px;
-  background: #fff;
-}
-
-.cursor__inner--circle {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #fff;
-}
-
 /* Media */
-@media screen and (min-width: 53em) {
-  *,
-  *::after,
-  *::before {
-    cursor: none !important;
-  }
-}
-
-@media screen and (max-width: 53em) {
-  .cursor {
-    visibility: hidden;
-  }
-}
 
 @media screen and (max-width: 1024px) {
   .nav-links {

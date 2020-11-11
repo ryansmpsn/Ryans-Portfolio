@@ -7,7 +7,7 @@
     <!-- Font Import -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <!-- CSS Import -->
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/dist/sample.css" />
   </head>
   <body>
@@ -28,28 +28,31 @@
       </nav>
       <div id="large-header" class="large-header">
         <section class="p8">
-          <a href="#" data-cont="ryan simpson">
-            ryan simpson
-            <div class="line"></div>
-          </a>
-          <h1 class="main-title">(click <span class="thin">to enter)</span></h1>
+          <div id="click-hover">
+            <a href="#" data-cont="ryan simpson">
+              ryan simpson
+              <div class="line"></div>
+            </a>
+            <h1 class="main-title">(click <span class="thin">to enter)</span></h1>
+          </div>
         </section>
         <canvas id="demo-canvas"></canvas>
       </div>
+      <!-- Bubble Fx -->
+      <div class="content content--canvas">
+        <h2 class="content__title">Pipeline</h2>
+      </div>
     </main>
 
-    <!-- Cursor FX -->
-    <div class="cursor">
-      <div class="cursor__inner cursor__inner--circle"></div>
-      <div class="cursor__inner cursor__inner--dot"></div>
-    </div>
-
     <!-- Script Imports -->
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/charming.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
-    <script src="js/demo.js"></script>
     <script src="js/backgroundAnimation.js"></script>
     <script src="js/navigation.js"></script>
+
+    <!-- Bubble fx -->
+    <script src="js/noise.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/shift.js"></script>
+    <script src="js/demo1.js"></script>
   </body>
 </html>

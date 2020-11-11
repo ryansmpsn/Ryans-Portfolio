@@ -44,7 +44,7 @@ section.p8 a:after {
   left: 50%;
   margin-left: -194.5px;
   margin-top: -28.5px;
-  color: black;
+  color: lightgray;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
   -moz-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
   -ms-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
@@ -100,7 +100,7 @@ section.p8 a .line {
   transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
 }
 section.p8 a:hover:before {
-  color: #fff;
+  color: hsl(240, 100%, 25%);
   -webkit-transform: translate(20px, 14.00415076px);
   -moz-transform: translate(20px, 14.00415076px);
   -ms-transform: translate(20px, 14.00415076px);
@@ -108,7 +108,7 @@ section.p8 a:hover:before {
   transform: translate(20px, 14.00415076px);
 }
 section.p8 a:hover:after {
-  color: #fff;
+  color: hsl(240, 100%, 15%);
   -webkit-transform: translate(-20px, -14.00415076px);
   -moz-transform: translate(-20px, -14.00415076px);
   -ms-transform: translate(-20px, -14.00415076px);

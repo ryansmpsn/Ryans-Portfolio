@@ -127,7 +127,7 @@ section {
       &:after {
         content: attr(data-cont);
         .a(@l, @a);
-        color: black;
+        color: lightgray;
         .transition(all 0.5s cubic-bezier(0,0.28,0,1));
       }
       @r: @a / tan(@deg);
@@ -154,11 +154,11 @@ section {
       }
       &:hover {
         &:before {
-          color: #fff;
+          color: hsl(240, 100%, 25%);
           .transform( translate(@dx, @dy));
         }
         &:after {
-          color: #fff;
+          color: hsl(240, 100%, 15%);
           .transform(translate(-@dx, -@dy));
         }
         .line {
