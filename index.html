@@ -11,40 +11,42 @@
     <link rel="stylesheet" href="css/dist/sample.css" />
   </head>
   <body>
-    <main>
-      <!-- Header -->
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#"> Home</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
-      <div id="large-header" class="large-header">
-        <section class="p8">
-          <div id="click-hover">
-            <a href="#" data-cont="ryan simpson">
-              ryan simpson
-              <div class="line"></div>
-            </a>
-            <h1 class="main-title">(click <span class="thin">to enter)</span></h1>
+    <!-- Header -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="main.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+    <main data-router-wrapper>
+      <section data-router-view="home" id="home">
+        <div>
+          <div id="large-header" class="large-header">
+            <section class="p8" data-router-view="home">
+              <div id="click-hover">
+                <a href="main.html" data-cont="ryan simpson">
+                  ryan simpson
+                  <div class="line"></div>
+                </a>
+                <h1 class="main-title">(click <span class="thin">to enter)</span></h1>
+              </div>
+            </section>
+            <canvas id="hover-canvas"></canvas>
           </div>
-        </section>
-        <canvas id="demo-canvas"></canvas>
-      </div>
-      <!-- Bubble Fx -->
-      <div class="content content--canvas">
-        <h2 class="content__title">Pipeline</h2>
-      </div>
+          <div class="content content--canvas"></div>
+        </div>
+      </section>
     </main>
 
     <!-- Script Imports -->
+    <script src="js/index.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="js/backgroundAnimation.js"></script>
     <script src="js/navigation.js"></script>

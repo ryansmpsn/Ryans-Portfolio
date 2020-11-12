@@ -1,5 +1,60 @@
 "use strict";
 
+var PI = Math.PI,
+    cos = Math.cos,
+    sin = Math.sin,
+    abs = Math.abs,
+    sqrt = Math.sqrt,
+    pow = Math.pow,
+    round = Math.round,
+    random = Math.random,
+    atan2 = Math.atan2;
+var HALF_PI = 0.5 * PI;
+var TAU = 2 * PI;
+var TO_RAD = PI / 180;
+
+var floor = function floor(n) {
+  return n | 0;
+};
+
+var rand = function rand(n) {
+  return n * random();
+};
+
+var randIn = function randIn(min, max) {
+  return rand(max - min) + min;
+};
+
+var randRange = function randRange(n) {
+  return n - rand(2 * n);
+};
+
+var fadeIn = function fadeIn(t, m) {
+  return t / m;
+};
+
+var fadeOut = function fadeOut(t, m) {
+  return (m - t) / m;
+};
+
+var fadeInOut = function fadeInOut(t, m) {
+  var hm = 0.5 * m;
+  return abs((t + hm) % m - hm) / hm;
+};
+
+var dist = function dist(x1, y1, x2, y2) {
+  return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+};
+
+var angle = function angle(x1, y1, x2, y2) {
+  return atan2(y2 - y1, x2 - x1);
+};
+
+var lerp = function lerp(n1, n2, speed) {
+  return (1 - speed) * n1 + speed * n2;
+}; // UTILS
+
+
 var circleCount = 30;
 var circlePropCount = 10;
 var circlePropsLength = circleCount * circlePropCount;
@@ -30,8 +85,8 @@ function setup() {
 }
 
 function initCircles() {
-  circleProps = new Float32Array(circlePropsLength);
-  simplex = new SimplexNoise();
+  circleProps = new Float32Array(circlePropsLength); // simplex = new SimplexNoise();
+
   baseHue = 220;
   var i;
 
@@ -44,7 +99,8 @@ function initCircle(i) {
   var x, y, n, t, speed, vx, vy, life, ttl, radius, hue;
   x = rand(canvas.a.width);
   y = rand(canvas.a.height);
-  n = simplex.noise3D(x * xOff, y * yOff, baseHue * zOff);
+  n = 1; // n = simplex.noise3D(x * xOff, y * yOff, baseHue * zOff);
+
   t = rand(TAU);
   speed = baseSpeed + rand(rangeSpeed);
   vx = speed * cos(t);

@@ -1,3 +1,16 @@
+/* 
+Red Highlight: #B73225
+
+Blue Minded: #004E7C
+
+Maroon 6: #591C0B
+
+Grey Water: #5C5F58
+
+Lighter Grey: #DCE1E3
+
+*/
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0px;
@@ -32,6 +45,7 @@ nav {
   letter-spacing: 3px;
   font-weight: lighter;
   font-size: 14px;
+  color: #591c0b;
 }
 
 .burger {
@@ -42,7 +56,7 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: lightblue;
+  background-color: #591c0b;
   margin: 5px;
   transition: all 0.5s ease;
 }
@@ -51,22 +65,17 @@ nav {
 .large-header {
   position: relative;
   width: 100%;
-  /* background: #333; */
   overflow: hidden;
   background-size: cover;
   background-position: center center;
   z-index: 1;
 }
 
-#large-header {
-  background-image: url("/img/Headerzz.jpg");
-}
-
 .main-title {
   position: absolute;
   margin: 0;
   padding: 0;
-  color: #f9f1e9;
+  color: #dce1e3;
   text-align: center;
   width: 389px;
   height: 57px;
@@ -76,16 +85,25 @@ nav {
   font-size: 0.7em;
 }
 
+.main-title .thin {
+  font-weight: 200;
+}
+
 #click-hover .main-title {
   visibility: hidden;
 }
+#home {
+}
+
+/* Hover */
 
 #click-hover:hover .main-title {
   visibility: visible;
 }
 
-.main-title .thin {
-  font-weight: 200;
+.nav-links a:hover {
+  text-decoration: underline;
+  font-weight: 800;
 }
 
 /* Media */
@@ -104,7 +122,7 @@ nav {
     justify-content: flex-end;
   }
   .main-title {
-    font-size: 3em;
+    font-size: 1em;
   }
   .nav-links {
     position: absolute;
@@ -116,8 +134,11 @@ nav {
     align-items: center;
     width: 40%;
     transform: translateX(100%);
-    background-color: lightgray;
+    background-color: rgb(220, 225, 227, 35%);
     transition: transform 0.3s ease-in;
+  }
+  .nav-links a {
+    color: #004e7c;
   }
   .nav-links li {
     opacity: 0;
