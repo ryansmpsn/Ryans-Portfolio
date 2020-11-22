@@ -7,30 +7,28 @@
     <!-- Font Import -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <!-- CSS Import -->
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/dist/index.css" />
     <link rel="stylesheet" href="css/dist/sample.css" />
   </head>
   <body>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html"> Home</a></li>
-        <li><a href="main.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
-    <main data-router-wrapper>
-      <section data-router-view="about" id="about">
-        <div>HELLO about</div>
-      </section>
+    <main>
+      <!-- Header -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      <div>Helllo about Page</div>
     </main>
-
-    <!-- Script Imports -->
-    <script src="js/index.js"></script>
   </body>
+  <!-- Script Imports -->
+  <script src="js/navigation.js"></script>
 </html>
