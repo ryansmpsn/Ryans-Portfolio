@@ -1,70 +1,15 @@
 "use strict";
 
-var PI = Math.PI,
-    cos = Math.cos,
-    sin = Math.sin,
-    abs = Math.abs,
-    sqrt = Math.sqrt,
-    pow = Math.pow,
-    round = Math.round,
-    random = Math.random,
-    atan2 = Math.atan2;
-var HALF_PI = 0.5 * PI;
-var TAU = 2 * PI;
-var TO_RAD = PI / 180;
-
-var floor = function floor(n) {
-  return n | 0;
-};
-
-var rand = function rand(n) {
-  return n * random();
-};
-
-var randIn = function randIn(min, max) {
-  return rand(max - min) + min;
-};
-
-var randRange = function randRange(n) {
-  return n - rand(2 * n);
-};
-
-var fadeIn = function fadeIn(t, m) {
-  return t / m;
-};
-
-var fadeOut = function fadeOut(t, m) {
-  return (m - t) / m;
-};
-
-var fadeInOut = function fadeInOut(t, m) {
-  var hm = 0.5 * m;
-  return abs((t + hm) % m - hm) / hm;
-};
-
-var dist = function dist(x1, y1, x2, y2) {
-  return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-};
-
-var angle = function angle(x1, y1, x2, y2) {
-  return atan2(y2 - y1, x2 - x1);
-};
-
-var lerp = function lerp(n1, n2, speed) {
-  return (1 - speed) * n1 + speed * n2;
-}; // UTILS
-
-
-var circleCount = 30;
-var circlePropCount = 10;
+var circleCount = Math.ceil(window.innerWidth / 100) * 100 / 4;
+var circlePropCount = 8;
 var circlePropsLength = circleCount * circlePropCount;
 var baseSpeed = 0.1;
 var rangeSpeed = 1;
 var baseTTL = 150;
 var rangeTTL = 200;
-var baseRadius = 150;
-var rangeRadius = 1;
-var rangeHue = 1;
+var baseRadius = 1;
+var rangeRadius = 3;
+var rangeLight = 100;
 var xOff = 0.0015;
 var yOff = 0.0015;
 var zOff = 0.0015;
@@ -75,7 +20,7 @@ var ctx;
 var circles;
 var circleProps;
 var simplex;
-var baseHue;
+var baseLight;
 
 function setup() {
   createCanvas();
@@ -85,9 +30,9 @@ function setup() {
 }
 
 function initCircles() {
-  circleProps = new Float32Array(circlePropsLength); // simplex = new SimplexNoise();
-
-  baseHue = 220;
+  circleProps = new Float32Array(circlePropsLength);
+  simplex = new SimplexNoise();
+  baseLight = 0;
   var i;
 
   for (i = 0; i < circlePropsLength; i += circlePropCount) {
@@ -96,11 +41,10 @@ function initCircles() {
 }
 
 function initCircle(i) {
-  var x, y, n, t, speed, vx, vy, life, ttl, radius, hue;
+  var x, y, n, t, speed, vx, vy, life, ttl, radius, light;
   x = rand(canvas.a.width);
   y = rand(canvas.a.height);
-  n = 1; // n = simplex.noise3D(x * xOff, y * yOff, baseHue * zOff);
-
+  n = simplex.noise3D(x * xOff, y * yOff, baseLight * zOff);
   t = rand(TAU);
   speed = baseSpeed + rand(rangeSpeed);
   vx = speed * cos(t);
@@ -108,13 +52,17 @@ function initCircle(i) {
   life = 0;
   ttl = baseTTL + rand(rangeTTL);
   radius = baseRadius + rand(rangeRadius);
-  hue = baseHue + n;
-  circleProps.set([x, y, vx, vy, life, ttl, radius, hue], i);
+  light = baseLight + n * rangeLight;
+  circleProps.set([x, y, vx, vy, life, ttl, radius, light], i);
 }
 
 function updateCircles() {
   var i;
-  baseHue++;
+  baseLight++;
+
+  if (baseLight > 300) {
+    baseLight = 10;
+  }
 
   for (i = 0; i < circlePropsLength; i += circlePropCount) {
     updateCircle(i);
@@ -129,7 +77,7 @@ function updateCircle(i) {
       i6 = 5 + i,
       i7 = 6 + i,
       i8 = 7 + i;
-  var x, y, vx, vy, life, ttl, radius, hue;
+  var x, y, vx, vy, life, ttl, radius, light;
   x = circleProps[i];
   y = circleProps[i2];
   vx = circleProps[i3];
@@ -137,18 +85,23 @@ function updateCircle(i) {
   life = circleProps[i5];
   ttl = circleProps[i6];
   radius = circleProps[i7];
-  hue = circleProps[i8];
-  drawCircle(x, y, life, ttl, radius, hue);
+  light = circleProps[i8];
+  drawCircle(x, y, life, ttl, radius, light);
   life++;
+
+  if (life > 200) {
+    life = 60;
+  }
+
   circleProps[i] = x + vx;
   circleProps[i2] = y + vy;
   circleProps[i5] = life;
   (checkBounds(x, y, radius) || life > ttl) && initCircle(i);
 }
 
-function drawCircle(x, y, life, ttl, radius, hue) {
+function drawCircle(x, y, life, ttl, radius, light) {
   ctx.a.save();
-  ctx.a.fillStyle = "hsla(".concat(hue, ",70%,20%,").concat(fadeInOut(life, ttl), ")");
+  ctx.a.fillStyle = "hsla(220,60%,".concat(light, "%,").concat(fadeInOut(life, ttl), ")");
   ctx.a.beginPath();
   ctx.a.arc(x, y, radius, 0, TAU);
   ctx.a.fill();
@@ -175,6 +128,8 @@ function createCanvas() {
 }
 
 function resize() {
+  circleCount = Math.ceil(window.innerWidth / 100) * 100 / 4;
+  initCircles();
   var _window = window,
       innerWidth = _window.innerWidth,
       innerHeight = _window.innerHeight;
@@ -188,7 +143,7 @@ function resize() {
 
 function render() {
   ctx.b.save();
-  ctx.b.filter = "blur(20px)";
+  ctx.b.filter = "blur(2px)";
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
 }

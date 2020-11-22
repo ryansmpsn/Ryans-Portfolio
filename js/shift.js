@@ -1,32 +1,15 @@
-const { PI, cos, sin, abs, sqrt, pow, round, random, atan2 } = Math;
-const HALF_PI = 0.5 * PI;
-const TAU = 2 * PI;
-const TO_RAD = PI / 180;
-const floor = (n) => n | 0;
-const rand = (n) => n * random();
-const randIn = (min, max) => rand(max - min) + min;
-const randRange = (n) => n - rand(2 * n);
-const fadeIn = (t, m) => t / m;
-const fadeOut = (t, m) => (m - t) / m;
-const fadeInOut = (t, m) => {
-  let hm = 0.5 * m;
-  return abs(((t + hm) % m) - hm) / hm;
-};
-const dist = (x1, y1, x2, y2) => sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-const angle = (x1, y1, x2, y2) => atan2(y2 - y1, x2 - x1);
-const lerp = (n1, n2, speed) => (1 - speed) * n1 + speed * n2;
-// UTILS
+"use strict";
 
-const circleCount = 30;
-const circlePropCount = 10;
+let circleCount = (Math.ceil(window.innerWidth / 100) * 100) / 4;
+const circlePropCount = 8;
 const circlePropsLength = circleCount * circlePropCount;
 const baseSpeed = 0.1;
 const rangeSpeed = 1;
 const baseTTL = 150;
 const rangeTTL = 200;
-const baseRadius = 150;
-const rangeRadius = 1;
-const rangeHue = 1;
+const baseRadius = 1;
+const rangeRadius = 3;
+const rangeLight = 100;
 const xOff = 0.0015;
 const yOff = 0.0015;
 const zOff = 0.0015;
@@ -38,7 +21,7 @@ let ctx;
 let circles;
 let circleProps;
 let simplex;
-let baseHue;
+let baseLight;
 
 function setup() {
   createCanvas();
@@ -49,8 +32,8 @@ function setup() {
 
 function initCircles() {
   circleProps = new Float32Array(circlePropsLength);
-  // simplex = new SimplexNoise();
-  baseHue = 220;
+  simplex = new SimplexNoise();
+  baseLight = 0;
 
   let i;
 
@@ -60,12 +43,12 @@ function initCircles() {
 }
 
 function initCircle(i) {
-  let x, y, n, t, speed, vx, vy, life, ttl, radius, hue;
+  let x, y, n, t, speed, vx, vy, life, ttl, radius, light;
 
   x = rand(canvas.a.width);
   y = rand(canvas.a.height);
-  n = 1;
-  // n = simplex.noise3D(x * xOff, y * yOff, baseHue * zOff);
+  n = simplex.noise3D(x * xOff, y * yOff, baseLight * zOff);
+
   t = rand(TAU);
   speed = baseSpeed + rand(rangeSpeed);
   vx = speed * cos(t);
@@ -73,15 +56,17 @@ function initCircle(i) {
   life = 0;
   ttl = baseTTL + rand(rangeTTL);
   radius = baseRadius + rand(rangeRadius);
-  hue = baseHue + n;
-
-  circleProps.set([x, y, vx, vy, life, ttl, radius, hue], i);
+  light = baseLight + n * rangeLight;
+  circleProps.set([x, y, vx, vy, life, ttl, radius, light], i);
 }
 
 function updateCircles() {
   let i;
 
-  baseHue++;
+  baseLight++;
+  if (baseLight > 300) {
+    baseLight = 10;
+  }
 
   for (i = 0; i < circlePropsLength; i += circlePropCount) {
     updateCircle(i);
@@ -96,7 +81,7 @@ function updateCircle(i) {
     i6 = 5 + i,
     i7 = 6 + i,
     i8 = 7 + i;
-  let x, y, vx, vy, life, ttl, radius, hue;
+  let x, y, vx, vy, life, ttl, radius, light;
 
   x = circleProps[i];
   y = circleProps[i2];
@@ -105,11 +90,14 @@ function updateCircle(i) {
   life = circleProps[i5];
   ttl = circleProps[i6];
   radius = circleProps[i7];
-  hue = circleProps[i8];
+  light = circleProps[i8];
 
-  drawCircle(x, y, life, ttl, radius, hue);
+  drawCircle(x, y, life, ttl, radius, light);
 
   life++;
+  if (life > 200) {
+    life = 60;
+  }
 
   circleProps[i] = x + vx;
   circleProps[i2] = y + vy;
@@ -118,9 +106,9 @@ function updateCircle(i) {
   (checkBounds(x, y, radius) || life > ttl) && initCircle(i);
 }
 
-function drawCircle(x, y, life, ttl, radius, hue) {
+function drawCircle(x, y, life, ttl, radius, light) {
   ctx.a.save();
-  ctx.a.fillStyle = `hsla(${hue},70%,20%,${fadeInOut(life, ttl)})`;
+  ctx.a.fillStyle = `hsla(220,60%,${light}%,${fadeInOut(life, ttl)})`;
   ctx.a.beginPath();
   ctx.a.arc(x, y, radius, 0, TAU);
   ctx.a.fill();
@@ -153,8 +141,9 @@ function createCanvas() {
 }
 
 function resize() {
+  circleCount = (Math.ceil(window.innerWidth / 100) * 100) / 4;
+  initCircles();
   const { innerWidth, innerHeight } = window;
-
   canvas.a.width = innerWidth;
   canvas.a.height = innerHeight;
 
@@ -168,7 +157,7 @@ function resize() {
 
 function render() {
   ctx.b.save();
-  ctx.b.filter = "blur(20px)";
+  ctx.b.filter = "blur(2px)";
   ctx.b.drawImage(canvas.a, 0, 0);
   ctx.b.restore();
 }

@@ -23,8 +23,8 @@
     };
     largeHeader = document.getElementById("large-header");
     largeHeader.style.height = height + "px";
-    canvas = document.getElementById("hover-canvas");
-    canvas.width = width;
+    canvas = document.getElementById("demo-canvas");
+    width > 765 ? canvas.width = width : 0;
     canvas.height = height;
     ctx = canvas.getContext("2d"); // create points
 
@@ -115,7 +115,7 @@
   }
 
   function resize() {
-    width = window.innerWidth;
+    width > 765 ? canvas.width = width : 0;
     height = window.innerHeight;
     largeHeader.style.height = height + "px";
     canvas.width = width;
