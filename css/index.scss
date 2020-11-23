@@ -58,6 +58,10 @@ nav {
   color: #591c0b;
 }
 
+.nav-links a:hover {
+  font-weight: 800;
+}
+
 .burger {
   display: none;
   cursor: pointer;
@@ -103,15 +107,8 @@ nav {
   visibility: hidden;
 }
 
-/* Hover */
-
 #click-hover:hover .main-title {
   visibility: visible;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-  font-weight: 800;
 }
 
 /* Media */
