@@ -21,4 +21,7 @@ const navSlide = () => {
   });
 };
 
-navSlide();
+function runNavSlide {
+  window.innerWidth < 768 && navSlide();
+
+}

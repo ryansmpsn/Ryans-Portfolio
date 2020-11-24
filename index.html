@@ -9,35 +9,37 @@
     <!-- CSS Import -->
     <link rel="stylesheet" href="css/dist/index.css" />
     <link rel="stylesheet" href="css/dist/sample.css" />
-    <link rel="stylesheet" href="css/dist/hover.css" />
   </head>
   <body>
+    <!-- Header -->
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <a class="link link--nav" href="/about.html"><span data-letters-l="abo" data-letters-r="ut">about</span></a>
+        </li>
+        <li>
+          <a class="link link--nav" href="/portfolio.html"><span data-letters-l="portf" data-letters-r="olio">portfolio</span></a>
+        </li>
+        <li>
+          <a class="link link--nav" href="/contact.html"><span data-letters-l="cont" data-letters-r="act">Contact</span></a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
     <main>
-      <!-- Header -->
-      <nav>
-        <ul class="nav-links">
-          <li>
-            <a class="link link--surinami" href="#"><span data-letters-l="Suri" data-letters-r="nami">Surinami</span></a>
-            <!-- <a href="index.html"> Home</a> -->
-          </li>
-          <!-- <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li> -->
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-      </nav>
       <div id="large-header" class="large-header">
         <section class="p8">
           <div id="click-hover">
-            <a href="#" data-cont="ryan simpson">
+            <a href="/portfolio.html" data-cont="ryan simpson">
               ryan simpson
               <div class="line"></div>
             </a>
-            <h1 class="main-title">(click <span class="thin">to enter)</span></h1>
+            <h1 class="main-title sub-title-1">Designer</h1>
+            <h1 class="main-title sub-title-2">Developer</h1>
           </div>
         </section>
         <canvas id="demo-canvas"></canvas>
