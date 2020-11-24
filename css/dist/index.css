@@ -237,11 +237,6 @@ nav {
 }
 
 /* Media Queries */
-@media screen and (max-width: 50em) {
-  .link--nav {
-    font-size: 3em;
-  }
-}
 @media screen and (max-width: 1024px) {
   .nav-links {
     justify-content: space-around;
@@ -259,6 +254,10 @@ nav {
 
   .main-title {
     font-size: 1em;
+  }
+
+  .link--nav {
+    font-size: 3em;
   }
 
   .nav-links {
