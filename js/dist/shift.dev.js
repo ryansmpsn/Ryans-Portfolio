@@ -1,27 +1,26 @@
 "use strict";
 
-let circleCount = (Math.ceil(window.innerWidth / 100) * 100) / 4;
-const circlePropCount = 8;
-const circlePropsLength = circleCount * circlePropCount;
-const baseSpeed = 0.1;
-const rangeSpeed = 1;
-const baseTTL = 150;
-const rangeTTL = 200;
-const baseRadius = 1;
-const rangeRadius = 3;
-const rangeLight = 100;
-const xOff = 0.0015;
-const yOff = 0.0015;
-const zOff = 0.0015;
-const backgroundColor = "hsla(0,0%,5%,1)";
-
-let container;
-let canvas;
-let ctx;
-let circles;
-let circleProps;
-let simplex;
-let baseLight;
+var circleCount = Math.ceil(window.innerWidth / 100) * 100 / 4;
+var circlePropCount = 8;
+var circlePropsLength = circleCount * circlePropCount;
+var baseSpeed = 0.1;
+var rangeSpeed = 1;
+var baseTTL = 150;
+var rangeTTL = 200;
+var baseRadius = 1;
+var rangeRadius = 3;
+var rangeLight = 100;
+var xOff = 0.0015;
+var yOff = 0.0015;
+var zOff = 0.0015;
+var backgroundColor = "hsla(0,0%,5%,1)";
+var container;
+var canvas;
+var ctx;
+var circles;
+var circleProps;
+var simplex;
+var baseLight;
 
 function setup() {
   createCanvas();
@@ -34,8 +33,7 @@ function initCircles() {
   circleProps = new Float32Array(circlePropsLength);
   simplex = new SimplexNoise();
   baseLight = 0;
-
-  let i;
+  var i;
 
   for (i = 0; i < circlePropsLength; i += circlePropCount) {
     initCircle(i);
@@ -43,12 +41,10 @@ function initCircles() {
 }
 
 function initCircle(i) {
-  let x, y, n, t, speed, vx, vy, life, ttl, radius, light;
-
+  var x, y, n, t, speed, vx, vy, life, ttl, radius, light;
   x = rand(canvas.a.width);
   y = rand(canvas.a.height);
   n = simplex.noise3D(x * xOff, y * yOff, baseLight * zOff);
-
   t = rand(TAU);
   speed = baseSpeed + rand(rangeSpeed);
   vx = speed * cos(t);
@@ -61,9 +57,9 @@ function initCircle(i) {
 }
 
 function updateCircles() {
-  let i;
-
+  var i;
   baseLight++;
+
   if (baseLight > 300) {
     baseLight = 10;
   }
@@ -74,15 +70,14 @@ function updateCircles() {
 }
 
 function updateCircle(i) {
-  let i2 = 1 + i,
-    i3 = 2 + i,
-    i4 = 3 + i,
-    i5 = 4 + i,
-    i6 = 5 + i,
-    i7 = 6 + i,
-    i8 = 7 + i;
-  let x, y, vx, vy, life, ttl, radius, light;
-
+  var i2 = 1 + i,
+      i3 = 2 + i,
+      i4 = 3 + i,
+      i5 = 4 + i,
+      i6 = 5 + i,
+      i7 = 6 + i,
+      i8 = 7 + i;
+  var x, y, vx, vy, life, ttl, radius, light;
   x = circleProps[i];
   y = circleProps[i2];
   vx = circleProps[i3];
@@ -91,10 +86,9 @@ function updateCircle(i) {
   ttl = circleProps[i6];
   radius = circleProps[i7];
   light = circleProps[i8];
-
   drawCircle(x, y, life, ttl, radius, light);
-
   life++;
+
   if (life > 200) {
     life = 60;
   }
@@ -102,13 +96,12 @@ function updateCircle(i) {
   circleProps[i] = x + vx;
   circleProps[i2] = y + vy;
   circleProps[i5] = life;
-
   (checkBounds(x, y, radius) || life > ttl) && initCircle(i);
 }
 
 function drawCircle(x, y, life, ttl, radius, light) {
   ctx.a.save();
-  ctx.a.fillStyle = `hsla(220,60%,${light}%,${fadeInOut(life, ttl)})`;
+  ctx.a.fillStyle = "hsla(220,60%,".concat(light, "%,").concat(fadeInOut(life, ttl), ")");
   ctx.a.beginPath();
   ctx.a.arc(x, y, radius, 0, TAU);
   ctx.a.fill();
@@ -124,34 +117,27 @@ function createCanvas() {
   container = document.querySelector(".content--canvas");
   canvas = {
     a: document.createElement("canvas"),
-    b: document.createElement("canvas"),
+    b: document.createElement("canvas")
   };
-  canvas.b.style = `
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	`;
+  canvas.b.style = "\n\t\tposition: fixed;\n\t\ttop: 0;\n\t\tleft: 0;\n\t\twidth: 100%;\n\t\theight: 100%;\n\t";
   container.appendChild(canvas.b);
   ctx = {
     a: canvas.a.getContext("2d"),
-    b: canvas.b.getContext("2d"),
+    b: canvas.b.getContext("2d")
   };
 }
 
 function resize() {
-  circleCount = (Math.ceil(window.innerWidth / 100) * 100) / 4;
+  circleCount = Math.ceil(window.innerWidth / 100) * 100 / 4;
   initCircles();
-  const { innerWidth, innerHeight } = window;
+  var _window = window,
+      innerWidth = _window.innerWidth,
+      innerHeight = _window.innerHeight;
   canvas.a.width = innerWidth;
   canvas.a.height = innerHeight;
-
   ctx.a.drawImage(canvas.b, 0, 0);
-
   canvas.b.width = innerWidth;
   canvas.b.height = innerHeight;
-
   ctx.b.drawImage(canvas.a, 0, 0);
 }
 
