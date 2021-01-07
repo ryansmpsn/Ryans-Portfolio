@@ -49,7 +49,7 @@ section.p8 a:after {
   left: 50%;
   margin-left: -494.5px;
   margin-top: -36.5px;
-  color: rgba(92, 95, 88, 0.658);
+  color: #004e7c;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
   -moz-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
   -ms-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);

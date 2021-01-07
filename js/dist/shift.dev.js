@@ -3,7 +3,7 @@
 var circleCount = Math.ceil(window.innerWidth / 100) * 100 / 4;
 var circlePropCount = 8;
 var circlePropsLength = circleCount * circlePropCount;
-var baseSpeed = 0.1;
+var baseSpeed = 0.01;
 var rangeSpeed = 1;
 var baseTTL = 150;
 var rangeTTL = 200;
@@ -13,7 +13,7 @@ var rangeLight = 100;
 var xOff = 0.0015;
 var yOff = 0.0015;
 var zOff = 0.0015;
-var backgroundColor = "hsla(0,0%,5%,1)";
+var backgroundColor = "hsla(100,100%,100%,1)";
 var container;
 var canvas;
 var ctx;
@@ -101,7 +101,7 @@ function updateCircle(i) {
 
 function drawCircle(x, y, life, ttl, radius, light) {
   ctx.a.save();
-  ctx.a.fillStyle = "hsla(220,60%,".concat(light, "%,").concat(fadeInOut(life, ttl), ")");
+  ctx.a.fillStyle = "hsla(220,80%,".concat(light, "%,").concat(fadeInOut(life, ttl), ")");
   ctx.a.beginPath();
   ctx.a.arc(x, y, radius, 0, TAU);
   ctx.a.fill();

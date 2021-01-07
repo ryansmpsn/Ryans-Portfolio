@@ -32,10 +32,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: #576b67;
-}
-
 section {
   position: relative;
   width: 90%;
@@ -137,7 +133,7 @@ nav {
 
 .link--nav:hover span::before,
 .link--nav:hover span::after {
-  color: #fff;
+  color: #004e7c;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -147,7 +143,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 55%;
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -179,6 +175,33 @@ nav {
   background-color: #591c0bb2;
   margin: 5px;
   transition: all 0.5s ease;
+}
+
+/*Social Links */
+.home-social a {
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.home-social li {
+  position: relative;
+  padding: 0.9rem 0;
+}
+
+.home-social li a {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+.home-social i,
+.home-social span {
+  position: absolute;
+  top: 0;
+  line-height: 36px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* Header */
