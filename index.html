@@ -9,6 +9,11 @@
     <!-- CSS Import -->
     <link rel="stylesheet" href="css/dist/index.css" />
     <link rel="stylesheet" href="css/dist/sample.css" />
+    <!-- Reveal Script -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      ScrollReveal({ duration: 1000, reset: true });
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -48,16 +53,16 @@
       <!-- Social Links -->
       <ul class="intro-social">
         <li>
-          <a href="#"><ion-icon name="logo-github"></ion-icon><span>GitHub</span> </a>
+          <a href="https://github.com/ryansmpsn" target="_blank"><ion-icon name="logo-github"></ion-icon><span>GitHub</span> </a>
         </li>
         <li>
-          <a href="#"><ion-icon name="logo-linkedin"></ion-icon><span>LinkedIn</span> </a>
+          <a href="https://www.linkedin.com/in/ryan-simpson94/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon><span>LinkedIn</span> </a>
         </li>
         <li>
-          <a href="#"><ion-icon name="logo-facebook"></ion-icon><span>Facebook</span> </a>
+          <a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon><span>Facebook</span> </a>
         </li>
         <li>
-          <a href="#"><ion-icon name="logo-twitter"></ion-icon><span>Twitter</span> </a>
+          <a href="https://twitter.com/Ryan_Software" target="_blank"><ion-icon name="logo-twitter"></ion-icon><span>Twitter</span> </a>
         </li>
         <li>
           <a href="#"><ion-icon name="mail-unread-outline"></ion-icon><span>E~Mail</span> </a>
@@ -66,6 +71,19 @@
       <!-- Bubble Fx -->
       <div class="content content--canvas"></div>
     </main>
+    <section id="about" class="aboutReveal">
+      <h1 class="about-title">About Me</h1>
+      <h2 class="content__text">Some Insight</h2>
+    </section>
+    <section id="portfolio" class="portfolioReveal">
+      <h1>Helllo Portfolio Section</h1>
+      <h2 class="content__text">My Work</h2>
+    </section>
+    <section id="contact" class="contactReveal">
+      <h1>Helllo Contact Section</h1>
+      <h2 class="content__text">Contact Me</h2>
+    </section>
+
     <!-- Icons -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
@@ -78,5 +96,11 @@
     <script src="js/noise.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/shift.js"></script>
+    <!-- Reveal Sections -->
+    <script>
+      ScrollReveal().reveal(".aboutReveal");
+      ScrollReveal().reveal(".portfolioReveal");
+      ScrollReveal().reveal(".contactReveal");
+    </script>
   </body>
 </html>

@@ -5,7 +5,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-section {
+.p8 {
   font-family: "Open Sans", sans-serif;
   position: absolute;
   top: 50%;
@@ -13,7 +13,7 @@ section {
   width: auto;
   margin: 0 auto 30px;
 }
-section a {
+.p8 a {
   text-transform: uppercase;
   font-weight: 700;
   text-align: center;
@@ -23,11 +23,11 @@ section a {
   font-size: 5.875em;
 }
 @media only screen and (max-width: 1024px) {
-  section a {
+  .p8 a {
     font-size: 2.875em;
   }
 }
-section.p8 a {
+.p8.p8 a {
   width: 989px;
   height: 73px;
   line-height: 73px;
@@ -38,8 +38,8 @@ section.p8 a {
   margin-top: -36.5px;
   color: transparent;
 }
-section.p8 a:before,
-section.p8 a:after {
+.p8.p8 a:before,
+.p8.p8 a:after {
   content: attr(data-cont);
   width: 989px;
   height: 73px;
@@ -56,7 +56,7 @@ section.p8 a:after {
   -o-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
   transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
 }
-section.p8 a:before {
+.p8.p8 a:before {
   -webkit-clip-path: polygon(0 0, 0 100%, 598.75480449px 100%, 390.24519551px 0%);
   clip-path: polygon(0 0, 0 100%, 598.75480449px 100%, 390.24519551px 0%);
   -webkit-transform: translate(0, 0);
@@ -70,7 +70,7 @@ section.p8 a:before {
   -o-transform-origin: 25% 50%;
   transform-origin: 25% 50%;
 }
-section.p8 a:after {
+.p8.p8 a:after {
   -webkit-clip-path: polygon(390.24519551px 0, 598.75480449px 100%, 100% 100%, 100% 0%);
   clip-path: polygon(390.24519551px 0, 598.75480449px 100%, 100% 100%, 100% 0%);
   -webkit-transform: translate(0, 0);
@@ -84,7 +84,7 @@ section.p8 a:after {
   -o-transform-origin: 75% 50%;
   transform-origin: 75% 50%;
 }
-section.p8 a .line {
+.p8.p8 a .line {
   background-color: #ffffff;
   width: 0.001px;
   height: 2px;
@@ -104,7 +104,7 @@ section.p8 a .line {
   -o-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
   transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
 }
-section.p8 a:hover:before {
+.p8.p8 a:hover:before {
   color: #591c0bb2;
   text-decoration: underline;
   -webkit-transform: translate(20px, 14.00415076px);
@@ -113,7 +113,7 @@ section.p8 a:hover:before {
   -o-transform: translate(20px, 14.00415076px);
   transform: translate(20px, 14.00415076px);
 }
-section.p8 a:hover:after {
+.p8.p8 a:hover:after {
   color: #591c0bb2;
   text-decoration: underline;
   -webkit-transform: translate(-20px, -14.00415076px);
@@ -122,7 +122,7 @@ section.p8 a:hover:after {
   -o-transform: translate(-20px, -14.00415076px);
   transform: translate(-20px, -14.00415076px);
 }
-section.p8 a:hover .line {
+.p8.p8 a:hover .line {
   width: 1978px;
   position: absolute;
   top: 50%;
