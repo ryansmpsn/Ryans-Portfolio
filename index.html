@@ -12,11 +12,13 @@
     <!-- Reveal Script -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
-      ScrollReveal({ duration: 1000, reset: true });
+      ScrollReveal({ duration: 1500, reset: true });
     </script>
+    <!-- Lottie CDN -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
+
   <body>
-    <!-- Header -->
     <nav>
       <ul class="nav-links">
         <li>
@@ -29,12 +31,14 @@
           <a class="link link--nav" href="#contact"><span data-letters-l="cont" data-letters-r="act">Contact</span></a>
         </li>
       </ul>
+
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
     </nav>
+
     <header>
       <div id="large-header" class="large-header">
         <section class="p8">
@@ -49,7 +53,10 @@
         </section>
         <canvas id="demo-canvas"></canvas>
       </div>
+
+      <!-- CTA Button -->
       <a id="cta-button" href="#portfolio">this is button</a>
+
       <!-- Social Links -->
       <ul class="intro-social">
         <li>
@@ -69,47 +76,42 @@
         </li>
       </ul>
 
-      <!-- Scroll for About Me -->
       <!-- Bubble Fx -->
-      <div class="content content--canvas"></div>
+      <div class="content--canvas"></div>
     </header>
+
     <main>
+      <!-- About Section -->
       <section id="about" class="aboutReveal">
         <h1 class="section-title">About Me</h1>
         <div class="about-text">
           Some Insight about my life. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit repellendus unde cupiditate debitis magnam eius, nemo est nihil, facilis quam eos eveniet vel veniam modi possimus
           minus optio laudantium eaque.
         </div>
-        <div class="about-things">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque rerum accusantium quaerat tempore exercitationem iure magni optio fugit est velit, eaque sunt quo quisquam, veritatis maxime rem tempora esse
-          facere!
+        <div class="about-animation">
+          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_k86wxpgr.json" background="transparent" speed="1" style="width: 90%; height: 90%" loop autoplay></lottie-player>
+          <!-- issues with this lottie file find another <lottie-player id="firstLottie" src="https://assets8.lottiefiles.com/datafiles/6WfDdm3ooQTEs1L/data.json" style="width: 90%; height: 90%" autoplay loop speed="2.5">"></lottie-player> -->
         </div>
       </section>
+      <!-- End About Section -->
+
+      <!-- Portfolio Section -->
       <section id="portfolio" class="portfolioReveal">
         <h1 class="section-title">My Work</h1>
         <h2 class="content__text">DVBSSS good things here to come</h2>
       </section>
+
+      <!-- End Portfolio Section -->
+
+      <!-- Contact Section -->
       <section id="contact" class="contactReveal">
-        <h1 class="section-title">Helllo Contact Section</h1>
-        <h2 class="content__text">Contact Me</h2>
+        <h1 class="section-title">Contact Me</h1>
+        <div class="contact-animation">
+          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_k86wxpgr.json" background="transparent" speed="1" style="width: 90%; height: 90%" loop autoplay></lottie-player>
+        </div>
+        <div class="contact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
       </section>
-      <ul class="intro-social">
-        <li>
-          <a href="https://github.com/ryansmpsn" target="_blank"><ion-icon name="logo-github"></ion-icon><span>GitHub</span> </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/ryan-simpson94/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon><span>LinkedIn</span> </a>
-        </li>
-        <li>
-          <a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon><span>Facebook</span> </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/Ryan_Software" target="_blank"><ion-icon name="logo-twitter"></ion-icon><span>Twitter</span> </a>
-        </li>
-        <li>
-          <a href="#"><ion-icon name="mail-unread"></ion-icon><span>E~Mail</span> </a>
-        </li>
-      </ul>
+      <!-- End Contact Section -->
     </main>
     <!-- Icons -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>

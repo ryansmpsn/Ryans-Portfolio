@@ -32,15 +32,6 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  position: relative;
-  width: 90%;
-}
-
-main {
-  display: grid;
-}
-
 /* Nav */
 nav {
   position: fixed;
@@ -310,20 +301,27 @@ nav {
   z-index: 2;
 }
 
+section {
+  display: grid;
+  position: relative;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1fr 1fr;
+}
+
 .section-title {
+  grid-row: 1/2;
   grid-column: 1/span 2;
   text-align: center;
   font-size: 2.5em;
-  height: 1px;
-  margin-top: 10vh;
+  height: 1.5em;
 }
 
 #about {
-  display: grid;
   background-color: rgba(220, 225, 227, 0.9);
   border-radius: 10px;
-  width: 100%;
-  height: 100vh;
+  margin-top: -3vh;
 }
 
 .about-text {
@@ -331,8 +329,7 @@ nav {
   grid-column: 1/2;
 }
 
-.about-things {
-  margin: 5em;
+.about-animation {
   grid-column: 2/2;
 }
 
@@ -342,8 +339,7 @@ nav {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
-  width: 100%;
-  height: 100vh;
+  margin-top: 5vh;
 }
 
 #contact {
@@ -353,8 +349,18 @@ nav {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 100%;
-  height: 100vh;
+  margin-top: 5vh;
+}
+
+.contact-animation {
+  grid-column: 1/2;
+  grid-row: 2/2;
+}
+
+.contact-text {
+  margin: 1em 5em 1em;
+  grid-column: 2/2;
+  grid-row: 2/2;
 }
 
 /* Media Queries */
