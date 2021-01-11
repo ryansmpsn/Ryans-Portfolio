@@ -27,6 +27,6 @@ navSlide();
 
 // Scroll Reveal
 
-ScrollReveal().reveal(".aboutReveal");
-ScrollReveal().reveal(".portfolioReveal");
-ScrollReveal().reveal(".contactReveal");
+ScrollReveal().reveal("#about");
+ScrollReveal().reveal("#portfolio");
+ScrollReveal().reveal("#contact");
