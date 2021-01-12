@@ -126,7 +126,6 @@
       &:after {
         content: attr(data-cont);
         .a(@l, @a);
-        color: rgb(0, 78, 124);
         // color: rgba(92, 95, 88, 0.758);
         .transition(all 0.5s cubic-bezier(0,0.28,0,1));
       }
@@ -152,21 +151,37 @@
         .abstlycenter(0.001px, 2px);
         .transition(all 0.5s cubic-bezier(0,0.28,0,1));
       }
+
+      &:before {
+        color: #591c0b;
+        text-decoration: none;
+        .transform( translate(@dx, @dy));
+      }
+      &:after {
+        color: #591c0b;
+        text-decoration: none;
+        .transform(translate(-@dx, -@dy));
+      }
+      .line {
+        width: 2 * @l;
+        .abstlycenter(2*@l, 2px);
+        background-color: black;
+      }
+
       &:hover {
         &:before {
-          color: #591c0bb2;
-          text-decoration: none;
-          .transform( translate(@dx, @dy));
+          color: rgb(0, 78, 124);
+          .transform( translate(0, 0));
         }
         &:after {
-          color: #591c0bb2;
-          text-decoration: none;
-          .transform(translate(-@dx, -@dy));
+          color: rgb(0, 78, 124);
+          .transform( translate(0, 0));
         }
         .line {
-          width: 2 * @l;
-          .abstlycenter(2*@l, 2px);
-          background-color: black;
+          .abstlycenter(0.001px, 2px);
+
+          width: 0.001px;
+          background-color: rgba(255, 255, 255, 1);
         }
       }
     }

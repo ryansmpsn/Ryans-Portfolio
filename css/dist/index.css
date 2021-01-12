@@ -40,6 +40,16 @@ html {
     font-size: 0.55vw;
   }
 }
+@media only screen and (min-width: 2650px) {
+  html {
+    font-size: 0.45vw;
+  }
+}
+@media only screen and (min-width: 3250px) {
+  html {
+    font-size: 0.4vw;
+  }
+}
 /* Nav */
 nav {
   font-family: "Poppins", "Roboto", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
@@ -281,29 +291,29 @@ nav {
   height: 57px;
   line-height: 57px;
   font-size: 1.7em;
-  opacity: 0;
+  opacity: 1;
 }
 
 #click-hover .sub-title-1 {
-  transform: translate3d(-50%, -73%, 0) rotate(35deg);
+  transform: translate3d(-139%, -505%, 0) rotate(35deg);
   transition: 0.35s ease-in-out;
+  color: #591c0bd8;
 }
 
 #click-hover:hover .sub-title-1 {
-  transform: translate3d(-139%, -505%, 0) rotate(35deg);
-  color: #591c0bb2;
-  opacity: 1;
+  transform: translate3d(-50%, -73%, 0) rotate(35deg);
+  opacity: 0;
 }
 
 #click-hover .sub-title-2 {
-  transform: translate3d(-50%, -73%, 0) rotate(35deg);
+  transform: translate3d(45%, 373%, 0) rotate(35deg);
   transition: 0.35s ease-in-out;
+  color: #591c0bd8;
 }
 
 #click-hover:hover .sub-title-2 {
-  transform: translate3d(45%, 373%, 0) rotate(35deg);
-  color: #591c0bb2;
-  opacity: 1;
+  transform: translate3d(-50%, -73%, 0) rotate(35deg);
+  opacity: 0;
 }
 
 .intro-text {
@@ -321,7 +331,7 @@ nav {
   text-align: center;
 }
 
-section:not(:first-child) {
+section:not(.p8) {
   padding: 2em;
   display: grid;
   position: relative;
@@ -587,7 +597,7 @@ footer {
 }
 @media screen and (max-width: 1024px) {
   html {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
   }
 
   .nav-links {
@@ -596,7 +606,7 @@ footer {
   }
 
   .intro-text {
-    top: 65%;
+    top: 80%;
   }
 
   .intro-social {
@@ -655,10 +665,6 @@ footer {
 
   nav {
     justify-content: flex-end;
-  }
-
-  .main-title {
-    font-size: 3rem;
   }
 
   .link--nav {
