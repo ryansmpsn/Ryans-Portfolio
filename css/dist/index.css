@@ -271,6 +271,49 @@ nav {
   transform: scale(1);
 }
 
+/* -------------------------------------------------------------------
+ * ## intro scroll
+ * ------------------------------------------------------------------- */
+.intro-scroll {
+  z-index: 2;
+  line-height: 12px;
+  position: absolute;
+  left: 8rem;
+  bottom: 0;
+  -webkit-transform: rotate(-90deg) translate3d(0, 100%, 0);
+  transform: rotate(-90deg) translate3d(0, 100%, 0);
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom;
+}
+
+.intro-scroll .scroll-link {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.7);
+  padding-left: 9.6rem;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+}
+
+.intro-scroll .scroll-link:hover,
+.intro-scroll .scroll-link:focus {
+  color: #591c0b;
+}
+
+.intro-scroll::before {
+  display: block;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 7.8rem;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
 /* Header */
 .large-header {
   position: relative;
@@ -295,13 +338,13 @@ nav {
 }
 
 #click-hover .sub-title-1 {
-  transform: translate3d(-139%, -505%, 0) rotate(35deg);
+  transform: translate(-139%, -505%) rotate(35deg);
   transition: 0.35s ease-in-out;
   color: #591c0bd8;
 }
 
 #click-hover:hover .sub-title-1 {
-  transform: translate3d(-50%, -73%, 0) rotate(35deg);
+  transform: translate(-50%, -73%) rotate(35deg);
   opacity: 0;
 }
 
@@ -346,6 +389,7 @@ section:not(.p8) {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 30px;
   margin-bottom: 5vh;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .section-title {
@@ -396,6 +440,7 @@ section:not(.p8) {
   grid-template-columns: 1fr 1fr 1fr;
   grid-column: 1/span 4;
   display: grid;
+  justify-items: center;
 }
 .technologies .portfolio-description {
   margin: 1em 5em 1em;
@@ -415,6 +460,18 @@ section:not(.p8) {
   align-items: center;
   margin: 1em;
   font-size: 1.5em;
+}
+.technologies .tech-list a {
+  -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.technologies .tech-list a:hover {
+  color: #77250ffa;
+}
+.technologies ul li::marker {
+  color: rgba(220, 225, 227, 0);
 }
 
 .tilter {
@@ -667,6 +724,14 @@ footer {
     justify-content: flex-end;
   }
 
+  #click-hover .sub-title-1 {
+    transform: translate(-100%, -310%) rotate(35deg);
+  }
+
+  #click-hover .sub-title-2 {
+    transform: translate(10%, 215%) rotate(35deg);
+  }
+
   .link--nav {
     font-size: 3rem;
   }
@@ -767,4 +832,31 @@ footer {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media only screen and (max-width: 426px) {
+  .main-title {
+    width: 75px;
+    height: 40px;
+  }
+
+  #click-hover .sub-title-1 {
+    transform: translate(-185%, -275%) rotate(35deg);
+  }
+
+  #click-hover .sub-title-2 {
+    transform: translate(135%, 142%) rotate(35deg);
+  }
+
+  #about p {
+    font-size: 0.8em;
+  }
+
+  .about-animation {
+    padding: 0;
+  }
+
+  .contact-animation {
+    padding: 0;
+  }
 }
