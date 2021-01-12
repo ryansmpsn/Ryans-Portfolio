@@ -22,11 +22,6 @@
   display: block;
   font-size: 5.875em;
 }
-@media only screen and (max-width: 1024px) {
-  .p8 a {
-    font-size: 2.875em;
-  }
-}
 .p8.p8 a {
   width: 989px;
   height: 73px;

@@ -8,9 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <!-- CSS Import -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/dist/index.css" />
-    <link rel="stylesheet" href="css/dist/sample.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="css/dist/sample.css" />
+    <link rel="stylesheet" href="css/dist/index.css" />
     <!-- Reveal Script -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
@@ -35,6 +35,9 @@
         <li>
           <a class="link link--nav" href="#contact"><span data-letters-l="cont" data-letters-r="act">Contact</span></a>
         </li>
+        <li>
+          <a class="link link--nav" href="#contact"><span data-letters-l="cont" data-letters-r="act">Resume</span></a>
+        </li>
       </ul>
 
       <div class="burger">
@@ -57,7 +60,10 @@
           </div>
         </section>
         <!-- CTA Button -->
-        <button class="cta-button" href="#portfolio">View My Work</button>
+        <a class="btn cta-button" href="#portfolio">View My Work</a>
+        <div class="intro-text">
+          I am a Software Engineer based in Jacksonville, FL specializing in Front-End Development.I love building (and occasionally designing) exceptional websites, applications, and everything in between.
+        </div>
         <canvas id="demo-canvas"></canvas>
       </div>
 
@@ -70,13 +76,13 @@
           <a href="https://www.linkedin.com/in/ryan-simpson94/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon><span>LinkedIn</span> </a>
         </li>
         <li>
-          <a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon><span>Facebook</span> </a>
+          <a target="_blank"><ion-icon name="logo-facebook"></ion-icon><span>Facebook</span> </a>
         </li>
         <li>
           <a href="https://twitter.com/Ryan_Software" target="_blank"><ion-icon name="logo-twitter"></ion-icon><span>Twitter</span> </a>
         </li>
         <li>
-          <a href="#"><ion-icon name="mail-unread"></ion-icon><span>E~Mail</span> </a>
+          <a><ion-icon name="mail-unread"></ion-icon><span>E~Mail</span> </a>
         </li>
       </ul>
 
@@ -103,14 +109,90 @@
       <!-- End About Section -->
 
       <!-- Portfolio Section -->
-      <section id="portfolio" class="smooth content--c1">
+      <section id="portfolio" class="smooth">
+        <h1 class="portfolio-label">Projects</h1>
+        <a href="https://test.vilanomanagementsvs.com/" class="tilter">
+          <figure class="tilter__figure">
+            <img class="tilter__image" src="img/vilano.png" alt="img01" />
+            <div class="tilter__deco tilter__deco--shine"><div></div></div>
+            <figcaption class="tilter__caption">
+              <h3 class="tilter__title">Vilano</h3>
+              <p class="tilter__hover">Click to Visit Site</p>
+              <p class="tilter__description">Web Application</p>
+            </figcaption>
+            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+              <path d="M20.5,20.5h260v375h-260V20.5z" />
+            </svg>
+          </figure>
+          <p class="tilter-text">React JS - Python</p>
+        </a>
+
+        <a href="https://www.omega-mile.com/" target="_blank" class="tilter">
+          <figure class="tilter__figure">
+            <img class="tilter__image" src="img/omega-Mile.jpg" alt="Ωmega Mile" />
+            <div class="tilter__deco tilter__deco--shine"><div></div></div>
+            <figcaption class="tilter__caption">
+              <p class="tilter__hover">Click to Visit Site</p>
+              <h3 class="tilter__title">Ωmega Mile</h3>
+              <p class="tilter__description">Website</p>
+            </figcaption>
+            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+              <path d="M20.5,20.5h260v375h-260V20.5z" />
+            </svg>
+          </figure>
+          <p>HTML - CSS - Javscript</p>
+        </a>
+        <a href="https://www.rwbyrd.com/" target="_blank" class="tilter">
+          <figure class="tilter__figure">
+            <img class="tilter__image" src="img/rwbyrd.jpg" alt="rwbryrd" />
+            <div class="tilter__deco tilter__deco--shine"><div></div></div>
+            <figcaption class="tilter__caption">
+              <p class="tilter__hover">Click to Visit Site</p>
+              <h3 class="tilter__title">R.W. Byrd</h3>
+              <p class="tilter__description">Website</p>
+            </figcaption>
+            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+              <path d="M20.5,20.5h260v375h-260V20.5z" />
+            </svg>
+          </figure>
+          <p>HTML - CSS - Javscript</p>
+        </a>
+        <a href="http://test.postalfleetsvs.com/" target="_blank" class="tilter">
+          <figure class="tilter__figure">
+            <img class="tilter__image" src="img/postalfleet.jpg" alt="postalfleet" />
+            <div class="tilter__deco tilter__deco--shine"><div></div></div>
+            <figcaption class="tilter__caption">
+              <p class="tilter__hover">Click to Visit Site</p>
+              <h3 class="tilter__title">Postal Fleet Services Inc.</h3>
+              <p class="tilter__description">Website</p>
+            </figcaption>
+            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+              <path d="M20.5,20.5h260v375h-260V20.5z" />
+            </svg>
+          </figure>
+          <p>HTML - CSS - Javscript</p>
+        </a>
+        <a href="https://www.vilanoemployment.com/" target="_blank" class="tilter">
+          <figure class="tilter__figure">
+            <img class="tilter__image" src="img/vilanoemploment.jpg" alt="vilanoemploment" />
+            <div class="tilter__deco tilter__deco--shine"><div></div></div>
+            <figcaption class="tilter__caption">
+              <!-- <p class="tilter__hover">Click to Visit Site</p> -->
+              <h3 class="tilter__title">Vilano Employment Services</h3>
+              <p class="tilter__description">Website</p>
+            </figcaption>
+            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
+              <path d="M20.5,20.5h260v375h-260V20.5z" />
+            </svg>
+          </figure>
+          <p>HTML - CSS - Javscript</p>
+        </a>
         <h1 class="portfolio-label">Technologies</h1>
         <div class="portfolio-description">
           <p>
             some tech stuff here describing what i do Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sequi magnam repellat, animi dolorem temporibus vel odio debitis consectetur modi architecto vitae labore
             optio perspiciatis, laudantium ducimus, vero perferendis. Iusto.
           </p>
-          <button>Resume</button>
         </div>
         <div class="technologies">
           <ul>
@@ -134,73 +216,6 @@
             </li>
           </ul>
         </div>
-        <h1 class="portfolio-label">Projects</h1>
-        <a href="#" class="tilter tilter--1">
-          <figure class="tilter__figure">
-            <img class="tilter__image" src="img/1.jpg" alt="img01" />
-            <div class="tilter__deco tilter__deco--shine"><div></div></div>
-            <figcaption class="tilter__caption">
-              <h3 class="tilter__title">Vilano</h3>
-              <p class="tilter__description">Web Application</p>
-            </figcaption>
-            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-              <path d="M20.5,20.5h260v375h-260V20.5z" />
-            </svg>
-          </figure>
-        </a>
-        <a href="#" class="tilter tilter--1">
-          <figure class="tilter__figure">
-            <img class="tilter__image" src="img/postalfleet.png" alt="img02" />
-            <div class="tilter__deco tilter__deco--shine"><div></div></div>
-            <figcaption class="tilter__caption">
-              <h3 class="tilter__title">Postal Fleet Services Inc.</h3>
-              <p class="tilter__description">Website</p>
-            </figcaption>
-            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-              <path d="M20.5,20.5h260v375h-260V20.5z" />
-            </svg>
-          </figure>
-        </a>
-        <a href="#" class="tilter tilter--1">
-          <figure class="tilter__figure">
-            <img class="tilter__image" src="img/omega-mile.png" alt="img02" />
-            <div class="tilter__deco tilter__deco--shine"><div></div></div>
-            <figcaption class="tilter__caption">
-              <h3 class="tilter__title">Ωmega Mile</h3>
-              <p class="tilter__description">Website</p>
-            </figcaption>
-            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-              <path d="M20.5,20.5h260v375h-260V20.5z" />
-            </svg>
-          </figure>
-        </a>
-        <a href="#" class="tilter tilter--1">
-          <figure class="tilter__figure">
-            <img class="tilter__image" src="img/rwbryrd.png" alt="img02" />
-            <div class="tilter__deco tilter__deco--shine"><div></div></div>
-            <figcaption class="tilter__caption">
-              <button>Visit Site</button> <button>View Code</button>
-              <h3 class="tilter__title">R.W. Byrd</h3>
-              <p class="tilter__description">Website</p>
-            </figcaption>
-            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-              <path d="M20.5,20.5h260v375h-260V20.5z" />
-            </svg>
-          </figure>
-        </a>
-        <a href="#" class="tilter tilter--1">
-          <figure class="tilter__figure">
-            <img class="tilter__image" src="img/vilanoemployment.png" alt="img02" />
-            <div class="tilter__deco tilter__deco--shine"><div></div></div>
-            <figcaption class="tilter__caption">
-              <h3 class="tilter__title">Vilano Employment Services</h3>
-              <p class="tilter__description">Website</p>
-            </figcaption>
-            <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-              <path d="M20.5,20.5h260v375h-260V20.5z" />
-            </svg>
-          </figure>
-        </a>
       </section>
       <!-- End Portfolio Section -->
 
