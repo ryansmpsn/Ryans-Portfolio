@@ -670,6 +670,10 @@ footer {
     right: 4rem;
   }
 
+  .intro-scroll {
+    left: 4rem;
+  }
+
   .about-text {
     font-size: 1em;
   }
