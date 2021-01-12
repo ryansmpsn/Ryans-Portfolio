@@ -334,7 +334,6 @@ section {
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(122, 122, 122, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  background-color: rgba(220, 225, 227, 0.7);
   border-radius: 30px;
   margin-bottom: 5vh;
 }
@@ -345,10 +344,11 @@ section {
   text-align: center;
   font-size: 2.5em;
   height: 1.5em;
+  color: #591c0bdc;
 }
 
 #about {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
 }
 
@@ -365,7 +365,7 @@ section {
 .about-animation {
   align-items: center;
   grid-column: 2/2;
-  padding: 10em;
+  padding-right: 10em;
 }
 
 #portfolio {
@@ -373,6 +373,7 @@ section {
   justify-items: center;
 }
 #portfolio .portfolio-label {
+  color: #591c0bdc;
   text-align: center;
   font-size: 2.5em;
   height: 1.5em;
@@ -380,9 +381,9 @@ section {
 }
 
 .technologies {
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column: 1/span 4;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
 }
 .technologies .portfolio-description {
   margin: 1em 5em 1em;
@@ -539,18 +540,18 @@ section {
 }
 
 #contact {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .contact-animation {
-  margin: 10em;
+  padding-left: 10em;
   grid-column: 1/2;
   grid-row: 2/2;
 }
 
 .contact-text {
   display: block;
-  margin: 5em 5em 1em;
+  margin: 8em 8em 1em;
   font-size: 1.5em;
   grid-column: 2/2;
   grid-row: 2/2;
@@ -568,6 +569,12 @@ section {
 
 .rotate {
   transform: rotate(65deg) scaleX(-1);
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2em;
 }
 
 /* Media Queries */
@@ -598,11 +605,14 @@ section {
     font-size: 1em;
   }
 
+  .about-animation {
+    padding: 0;
+  }
+
   #portfolio {
     grid-template-columns: 1fr 1fr;
   }
-
-  .portfolio-label {
+  #portfolio .portfolio-label {
     grid-column: 1/span 2;
   }
 
@@ -612,7 +622,16 @@ section {
   }
 
   .technologies {
-    grid-column: 2/2;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/span 2;
+  }
+
+  .contact-text {
+    margin: 1em;
+  }
+
+  .contact-animation {
+    padding: 0;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -689,8 +708,8 @@ section {
   }
 
   .technologies {
-    text-align: center;
     list-style-type: none;
+    display: block;
   }
 
   ul li::marker {
@@ -701,6 +720,14 @@ section {
     font-size: 0.8em;
     margin: 6em auto;
     height: auto;
+  }
+
+  .about-animation {
+    padding-left: 6em;
+  }
+
+  .contact-animation {
+    padding: 0 6em;
   }
 }
 /* Navigation Animation */
