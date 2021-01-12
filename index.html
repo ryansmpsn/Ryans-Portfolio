@@ -11,8 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     <!-- CSS Import -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <link rel="stylesheet" href="css/dist/sample.css" />
+    <link rel="stylesheet" href="css/dist/title.css" />
     <link rel="stylesheet" href="css/dist/index.css" />
     <!-- Reveal Script -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -39,7 +38,7 @@
           <a class="link link--nav" href="#contact"><span data-letters-l="cont" data-letters-r="act">Contact</span></a>
         </li>
         <li>
-          <a class="link link--nav" href="#contact"><span data-letters-l="cont" data-letters-r="act">Resume</span></a>
+          <a class="link link--nav" href="#contact"><span data-letters-l="Res" data-letters-r="ume">Resume</span></a>
         </li>
       </ul>
 
@@ -63,7 +62,6 @@
           </div>
         </section>
         <!-- CTA Button -->
-        <a class="btn cta-button" href="#portfolio">View My Work</a>
         <div class="intro-text">
           I am a Software Engineer based in Jacksonville, FL specializing in Front-End Development.I love building (and occasionally designing) exceptional websites, applications, and everything in between.
         </div>
@@ -115,22 +113,23 @@
       <section id="portfolio" class="smooth">
         <h1 class="portfolio-label">Projects</h1>
         <a href="https://test.vilanomanagementsvs.com/" class="tilter">
+          <p class="tilter-text">React JS - Python</p>
           <figure class="tilter__figure">
             <img class="tilter__image" src="img/vilano.png" alt="img01" />
             <div class="tilter__deco tilter__deco--shine"><div></div></div>
             <figcaption class="tilter__caption">
-              <h3 class="tilter__title">Vilano</h3>
               <p class="tilter__hover">Click to Visit Site</p>
+              <h3 class="tilter__title">Vilano</h3>
               <p class="tilter__description">Web Application</p>
             </figcaption>
             <svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
               <path d="M20.5,20.5h260v375h-260V20.5z" />
             </svg>
           </figure>
-          <p class="tilter-text">React JS - Python</p>
         </a>
 
         <a href="https://www.omega-mile.com/" target="_blank" class="tilter">
+          <p class="tilter-text">HTML - CSS - Javscript</p>
           <figure class="tilter__figure">
             <img class="tilter__image" src="img/omega-Mile.jpg" alt="Ωmega Mile" />
             <div class="tilter__deco tilter__deco--shine"><div></div></div>
@@ -143,9 +142,10 @@
               <path d="M20.5,20.5h260v375h-260V20.5z" />
             </svg>
           </figure>
-          <p>HTML - CSS - Javscript</p>
         </a>
         <a href="https://www.rwbyrd.com/" target="_blank" class="tilter">
+          <p class="tilter-text">HTML - CSS - Javscript</p>
+
           <figure class="tilter__figure">
             <img class="tilter__image" src="img/rwbyrd.jpg" alt="rwbryrd" />
             <div class="tilter__deco tilter__deco--shine"><div></div></div>
@@ -158,9 +158,10 @@
               <path d="M20.5,20.5h260v375h-260V20.5z" />
             </svg>
           </figure>
-          <p>HTML - CSS - Javscript</p>
         </a>
         <a href="http://test.postalfleetsvs.com/" target="_blank" class="tilter">
+          <p class="tilter-text">HTML - CSS - Javscript</p>
+
           <figure class="tilter__figure">
             <img class="tilter__image" src="img/postalfleet.jpg" alt="postalfleet" />
             <div class="tilter__deco tilter__deco--shine"><div></div></div>
@@ -173,14 +174,15 @@
               <path d="M20.5,20.5h260v375h-260V20.5z" />
             </svg>
           </figure>
-          <p>HTML - CSS - Javscript</p>
         </a>
         <a href="https://www.vilanoemployment.com/" target="_blank" class="tilter">
+          <p class="tilter-text">HTML - CSS - Javscript</p>
+
           <figure class="tilter__figure">
             <img class="tilter__image" src="img/vilanoemploment.jpg" alt="vilanoemploment" />
             <div class="tilter__deco tilter__deco--shine"><div></div></div>
             <figcaption class="tilter__caption">
-              <!-- <p class="tilter__hover">Click to Visit Site</p> -->
+              <p class="tilter__hover">Click to Visit Site</p>
               <h3 class="tilter__title">Vilano Employment Services</h3>
               <p class="tilter__description">Website</p>
             </figcaption>
@@ -188,36 +190,43 @@
               <path d="M20.5,20.5h260v375h-260V20.5z" />
             </svg>
           </figure>
-          <p>HTML - CSS - Javscript</p>
         </a>
-        <h1 class="portfolio-label">Technologies</h1>
-        <div class="portfolio-description">
-          <p>
-            some tech stuff here describing what i do Lorem ipsum dolor, sit amet consectetur adipisicing elit. At sequi magnam repellat, animi dolorem temporibus vel odio debitis consectetur modi architecto vitae labore
-            optio perspiciatis, laudantium ducimus, vero perferendis. Iusto.
-          </p>
-        </div>
         <div class="technologies">
-          <ul>
-            <li>
-              <p><ion-icon name="logo-html5"></ion-icon> HTML5 & (S)CSS</p>
-            </li>
-            <li>
-              <p><ion-icon name="logo-javascript"></ion-icon> Javascipt (ES6+)</p>
-            </li>
-            <li>
-              <p><ion-icon name="logo-react"></ion-icon> React</p>
-            </li>
-            <li>
-              <p><ion-icon name="logo-github"></ion-icon> GitHub</p>
-            </li>
-            <li>
-              <p><ion-icon name="logo-python"></ion-icon> Python</p>
-            </li>
-            <li>
-              <p><ion-icon name="server-outline"></ion-icon> SQL</p>
-            </li>
-          </ul>
+          <div class="portfolio-description">
+            <p>The main languages and technologies I use to build most of my projects are listed here. I am always open and eager to learn new languages and technologies.</p>
+          </div>
+          <h1 class="portfolio-list-label">Languages</h1>
+          <div class="tech-list">
+            <ul>
+              <li><ion-icon name="logo-html5"></ion-icon> HTML5</li>
+              <li><ion-icon name="logo-css3"></ion-icon> (S)CSS</li>
+              <li><ion-icon name="logo-javascript"></ion-icon> Javascipt (ES6+)</li>
+              <li><ion-icon name="logo-python"></ion-icon> Python</li>
+              <li><ion-icon name="server"></ion-icon> SQL</li>
+            </ul>
+          </div>
+          <h1 class="portfolio-list-label">Frameworks / Libraries</h1>
+
+          <div class="tech-list">
+            <ul>
+              <li><ion-icon name="logo-react"></ion-icon> React</li>
+              <li><ion-icon name="logo-twitter"></ion-icon> Bootstrap</li>
+              <li><ion-icon name="logo-nodejs"></ion-icon> Node JS</li>
+              <li><ion-icon name="flask"></ion-icon> Flask</li>
+              <li><ion-icon name="logo-laravel"></ion-icon> Laravel</li>
+            </ul>
+          </div>
+          <h1 class="portfolio-list-label">Technologies</h1>
+
+          <div class="tech-list">
+            <ul>
+              <li><ion-icon name="logo-google"></ion-icon> Google Cloud Platform</li>
+              <li><ion-icon name="logo-github"></ion-icon> GitHub</li>
+              <li><ion-icon name="globe"></ion-icon> Netlify</li>
+              <li><ion-icon name="logo-npm"></ion-icon> npm</li>
+              <li><ion-icon name="code-slash"></ion-icon> Visual Studio Code</li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- End Portfolio Section -->
@@ -235,7 +244,7 @@
           </p>
           <p>You can reach me at any of these links here!</p>
           <div class="social-arrow">
-            <lottie-player class="rotate" src="https://assets9.lottiefiles.com/packages/lf20_edprXU.json" background="transparent" speed="1" style="width: 85%; height: 85%" loop autoplay></lottie-player>
+            <lottie-player class="rotate" src="https://assets9.lottiefiles.com/packages/lf20_edprXU.json" background="transparent" speed=".5" style="width: 85%; height: 85%" loop autoplay></lottie-player>
           </div>
         </div>
       </section>

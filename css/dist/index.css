@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* 
 Red Highlight: #B73225
 rgb(183, 50, 37)
@@ -23,7 +22,7 @@ hsl(197,11.1%,87.6%)
 */
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700,900|Dosis:800|Playfair+Display:400,400italic,900italic|Lora:700|Syncopate:700|Roboto+Condensed:300italic|Oswald:700);
 * {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-family: "Poppins", "Roboto", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -36,34 +35,14 @@ html {
   scroll-behavior: smooth;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid rgba(59, 59, 59, 0.6);
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: rgba(59, 59, 59, 0.9);
-  text-align: center;
-  transition: all 0.2s;
-}
-
-a.btn:hover {
-  color: #ffffff;
-  background-color: #202020;
-}
-
-@media all and (max-width: 30em) {
-   a.btn {
-    display: block;
-    margin: 0.4em auto;
+@media only screen and (min-width: 2140px) {
+  html {
+    font-size: 0.55vw;
   }
 }
 /* Nav */
 nav {
+  font-family: "Poppins", "Roboto", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -76,6 +55,7 @@ nav {
 
 /* Nav link styles */
 .link {
+  font-family: "Poppins", "Roboto", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   outline: none;
   text-decoration: none;
   position: relative;
@@ -218,7 +198,7 @@ nav {
 }
 
 .intro-social a {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .intro-social a:hover,
@@ -241,7 +221,7 @@ nav {
   display: block;
   width: 1px;
   height: 7.8rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -251,8 +231,8 @@ nav {
   position: absolute;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.5);
   right: 4rem;
   opacity: 0;
   visibility: hidden;
@@ -269,7 +249,7 @@ nav {
   content: "";
   width: 8px;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 50%;
   right: -18px;
@@ -306,7 +286,7 @@ nav {
 
 #click-hover .sub-title-1 {
   transform: translate3d(-50%, -73%, 0) rotate(35deg);
-  transition: 0.35s ease-in;
+  transition: 0.35s ease-in-out;
 }
 
 #click-hover:hover .sub-title-1 {
@@ -317,7 +297,7 @@ nav {
 
 #click-hover .sub-title-2 {
   transform: translate3d(-50%, -73%, 0) rotate(35deg);
-  transition: 0.35s ease-in;
+  transition: 0.35s ease-in-out;
 }
 
 #click-hover:hover .sub-title-2 {
@@ -326,31 +306,37 @@ nav {
   opacity: 1;
 }
 
-a.cta-button {
-  position: absolute;
-  left: 47.5%;
-  bottom: 37%;
-}
-
 .intro-text {
-  position: absolute;
-  top: 60%;
-  left: 4%;
-  width: 25em;
+  position: relative;
+  margin: auto;
+  top: 75%;
+  width: 40em;
   padding: 0.5em;
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
+  font-size: 1.4em;
+  text-align: center;
 }
 
 section {
+  padding: 2em;
   display: grid;
   position: relative;
   width: 95%;
   margin-left: auto;
   margin-right: auto;
+  background: rgba(115, 115, 115, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(120, 120, 120, 0.3) 42%, rgba(51, 51, 51, 0.3) 100%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(122, 122, 122, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-color: rgba(220, 225, 227, 0.7);
+  border-radius: 30px;
+  margin-bottom: 5vh;
 }
 
 .section-title {
@@ -362,12 +348,6 @@ section {
 }
 
 #about {
-  background-color: rgba(220, 225, 227, 0.9);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  margin-bottom: 5vh;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
@@ -385,62 +365,187 @@ section {
 .about-animation {
   align-items: center;
   grid-column: 2/2;
-  padding-left: 10em;
-  margin-bottom: 2em;
+  padding: 10em;
 }
 
 #portfolio {
-  background-color: rgba(220, 225, 227, 0.9);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  margin-bottom: 5vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
 }
-
-.portfolio-label {
+#portfolio .portfolio-label {
   text-align: center;
   font-size: 2.5em;
   height: 1.5em;
   grid-column: 1/span 4;
 }
 
-.portfolio-description {
+.technologies {
+  grid-column: 1/span 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.technologies .portfolio-description {
   margin: 1em 5em 1em;
-  grid-column: 1/span 2;
+  grid-column: 1/span 3;
+  text-align: center;
+  font-size: 1.2em;
+}
+.technologies .portfolio-description p {
+  margin-bottom: 1em;
+}
+.technologies .portfolio-list-label {
+  grid-row: 2/3;
   text-align: center;
   font-size: 1.5em;
 }
-
-.portfolio-description p {
-  margin-bottom: 1em;
-}
-
-.technologies {
-  grid-column: 3/span 2;
+.technologies .tech-list {
   align-items: center;
   margin: 1em;
   font-size: 1.5em;
 }
 
+.tilter {
+  display: block;
+  position: relative;
+  width: 19rem;
+  height: 26rem;
+  /* width: 300px;
+  height: 415px; */
+  margin: 2.5rem 1.5rem;
+  color: #fff;
+  flex: none;
+  perspective: 1000px;
+  text-decoration: none;
+}
+
+.tilter * {
+  pointer-events: none;
+}
+
+.tilter-text {
+  color: rgba(45, 46, 44, 0.8);
+  font-size: 1em;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.tilter:hover,
+.tilter:focus {
+  color: #fff;
+  outline: none;
+}
+
+/* .tilter__figure,
+.tilter__deco,
+.tilter__caption {
+  will-change: transform;
+} */
+.tilter__figure,
+.tilter__image {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tilter__figure > * {
+  transform: translateZ(0px);
+  /* Force correct stacking order */
+}
+
+.smooth .tilter__figure,
+.smooth .tilter__deco--overlay,
+.smooth .tilter__deco--lines,
+.smooth .tilter__deco--shine div,
+.smooth .tilter__caption {
+  transition: transform 0.2s ease-out;
+}
+
+.tilter__figure {
+  position: relative;
+}
+
+.tilter__figure::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  box-shadow: 0 30px 20px rgba(35, 32, 39, 0.5);
+}
+
+.tilter__deco {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tilter__deco--overlay {
+  background-image: linear-gradient(45deg, rgba(226, 60, 99, 0.4), rgba(145, 58, 252, 0.4), rgba(16, 11, 192, 0.4));
+}
+
+.tilter__deco--shine div {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);
+}
+
+.tilter__deco--lines {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.tilter__caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 4em;
+}
+
+.tilter__title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 2.5em;
+  font-family: "Abril Fatface", serif;
+  line-height: 1;
+}
+
+.tilter__description {
+  margin: 1em 0 0 0;
+  font-size: 0.85em;
+  letter-spacing: 0.15em;
+}
+
+.tilter .tilter__figure::before {
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.5);
+}
+
+.tilter__hover {
+  font-size: 0.8em;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.tilter:hover .tilter__hover {
+  opacity: 1;
+}
+
 #contact {
-  background-color: rgba(220, 225, 227, 0.9);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  margin-bottom: 5vh;
   grid-template-columns: 1fr 1fr;
 }
 
 .contact-animation {
-  padding-left: 10em;
+  margin: 10em;
   grid-column: 1/2;
   grid-row: 2/2;
-  margin-bottom: -5em;
 }
 
 .contact-text {
@@ -519,6 +624,10 @@ section {
     overflow-x: hidden;
   }
 
+  #demo-canvas {
+    display: none;
+  }
+
   nav {
     justify-content: flex-end;
   }
@@ -564,6 +673,7 @@ section {
 
   .intro-text {
     top: 75%;
+    width: 30em;
   }
 
   section {
@@ -591,11 +701,6 @@ section {
     font-size: 0.8em;
     margin: 6em auto;
     height: auto;
-  }
-
-  .tilter-text {
-    color: black;
-    font-size: 1em;
   }
 }
 /* Navigation Animation */

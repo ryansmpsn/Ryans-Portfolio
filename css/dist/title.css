@@ -20,29 +20,29 @@
   text-decoration: none;
   color: #fff;
   display: block;
-  font-size: 5.875em;
+  font-size: 5.675em;
 }
 .p8.p8 a {
-  width: 989px;
+  width: 589px;
   height: 73px;
   line-height: 73px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -494.5px;
+  margin-left: -294.5px;
   margin-top: -36.5px;
   color: transparent;
 }
 .p8.p8 a:before,
 .p8.p8 a:after {
   content: attr(data-cont);
-  width: 989px;
+  width: 589px;
   height: 73px;
   line-height: 73px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -494.5px;
+  margin-left: -294.5px;
   margin-top: -36.5px;
   color: #004e7c;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
@@ -52,8 +52,8 @@
   transition: all 0.5s cubic-bezier(0, 0.28, 0, 1);
 }
 .p8.p8 a:before {
-  -webkit-clip-path: polygon(0 0, 0 100%, 598.75480449px 100%, 390.24519551px 0%);
-  clip-path: polygon(0 0, 0 100%, 598.75480449px 100%, 390.24519551px 0%);
+  -webkit-clip-path: polygon(0 0, 0 100%, 398.75480449px 100%, 190.24519551px 0%);
+  clip-path: polygon(0 0, 0 100%, 398.75480449px 100%, 190.24519551px 0%);
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -66,8 +66,8 @@
   transform-origin: 25% 50%;
 }
 .p8.p8 a:after {
-  -webkit-clip-path: polygon(390.24519551px 0, 598.75480449px 100%, 100% 100%, 100% 0%);
-  clip-path: polygon(390.24519551px 0, 598.75480449px 100%, 100% 100%, 100% 0%);
+  -webkit-clip-path: polygon(190.24519551px 0, 398.75480449px 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(190.24519551px 0, 398.75480449px 100%, 100% 100%, 100% 0%);
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -101,7 +101,7 @@
 }
 .p8.p8 a:hover:before {
   color: #591c0bb2;
-  text-decoration: underline;
+  text-decoration: none;
   -webkit-transform: translate(20px, 14.00415076px);
   -moz-transform: translate(20px, 14.00415076px);
   -ms-transform: translate(20px, 14.00415076px);
@@ -110,7 +110,7 @@
 }
 .p8.p8 a:hover:after {
   color: #591c0bb2;
-  text-decoration: underline;
+  text-decoration: none;
   -webkit-transform: translate(-20px, -14.00415076px);
   -moz-transform: translate(-20px, -14.00415076px);
   -ms-transform: translate(-20px, -14.00415076px);
@@ -118,11 +118,11 @@
   transform: translate(-20px, -14.00415076px);
 }
 .p8.p8 a:hover .line {
-  width: 1978px;
+  width: 1178px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -989px;
+  margin-left: -589px;
   margin-top: -1px;
   background-color: black;
 }
