@@ -283,7 +283,7 @@ nav {
 }
 
 .intro-scroll .scroll-link {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   text-align: left;
@@ -332,24 +332,24 @@ nav {
   opacity: 1;
 }
 
-#click-hover .sub-title-1 {
+.p8 .sub-title-1 {
   transform: translate(-139%, -505%) rotate(35deg);
   transition: 0.35s ease-in-out;
   color: #591c0bd8;
 }
 
-#click-hover:hover .sub-title-1 {
+.p8:hover .sub-title-1 {
   transform: translate(-50%, -73%) rotate(35deg);
   opacity: 0;
 }
 
-#click-hover .sub-title-2 {
+.p8 .sub-title-2 {
   transform: translate3d(45%, 373%, 0) rotate(35deg);
   transition: 0.35s ease-in-out;
   color: #591c0bd8;
 }
 
-#click-hover:hover .sub-title-2 {
+.p8:hover .sub-title-2 {
   transform: translate3d(-50%, -73%, 0) rotate(35deg);
   opacity: 0;
 }
@@ -709,10 +709,10 @@ footer {
   nav {
     justify-content: flex-end;
   }
-  #click-hover .sub-title-1 {
+  .p8 .sub-title-1 {
     transform: translate(-100%, -310%) rotate(35deg);
   }
-  #click-hover .sub-title-2 {
+  .p8 .sub-title-2 {
     transform: translate(10%, 215%) rotate(35deg);
   }
   .link--nav {
@@ -808,10 +808,10 @@ footer {
     width: 75px;
     height: 40px;
   }
-  #click-hover .sub-title-1 {
+  .p8 .sub-title-1 {
     transform: translate(-185%, -275%) rotate(35deg);
   }
-  #click-hover .sub-title-2 {
+  .p8 .sub-title-2 {
     transform: translate(135%, 142%) rotate(35deg);
   }
   #about {
